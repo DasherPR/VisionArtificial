@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-imagen = cv2.imread('Images/img1.jpg') 
+imagen = cv2.imread('Images/img2.jpg') 
 
 
 
@@ -31,7 +31,7 @@ cv2.destroyAllWindows()
 
 
 
-val, binarizada = cv2.threshold(gris,122,255,cv2.THRESH_BINARY) #Cuando el pixel sea mayor a 130 se asignará 255
+val, binarizada = cv2.threshold(gris,179,255,cv2.THRESH_BINARY) #Cuando el pixel sea mayor a 130 se asignará 255
 
 print("el umbral empleado fue:",val)
 cv2.imshow('Binarizada',binarizada)
@@ -98,7 +98,7 @@ cv2.imshow('imagen',imagen)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-cv2.imwrite("imagen2.png",imagen)  #Guardamos la imagen en disco
+## cv2.imwrite("imagen2.png",imagen)  #Guardamos la imagen en disco
 
 
 
