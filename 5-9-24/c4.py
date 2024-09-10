@@ -9,8 +9,8 @@ import numpy as np
 
 
 imagen = cv2.imread('Images/isa1.png'); #Cargo la imagen
-LimiteInferior = np.array([100,100,20],np.uint8); #Limite H
-LimiteSuperior = np.array([125,255,255],np.uint8); #Limite S
+LimiteInferior = np.array([25,100,20],np.uint8); #Limite Inferior HSV
+LimiteSuperior = np.array([35,255,255],np.uint8); #Limite Superior HSV
 #Los limites que hacemos son un vector con los valores que asignamos, cada uno con los limites hsv de los colores que uqeremos reconocer
 
 """
