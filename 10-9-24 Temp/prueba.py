@@ -30,8 +30,8 @@ while captura.isOpened():
         area = cv2.contourArea(c)
         if area > 10000:
             x, y, w, h = cv2.boundingRect(c)
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-            cv2.drawContours(frame, contornos, -1, (0, 0, 255), 3)
+            cv2.line(frame, (int(x+(w*0.1)/2), int(y+h/2)), (int(x+w*0.9+(w*0.1)/2), int(y+h/2)), (0, 0, 255), 2)
+            #cv2.drawContours(frame, contornos, -1, (0, 0, 255), 3)
             cv2.circle(frame, (int(x+w/2), int(y+h/2)), 2, (0, 255, 255), 3)
 
     cv2.imshow('video', frame)
