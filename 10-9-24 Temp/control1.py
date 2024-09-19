@@ -31,14 +31,14 @@ while (captura.isOpened()):
     for c in contornos:
        area = cv2.contourArea(c)
        if area>10000:
-        x,y,w,h = cv2.boundingRect(c) 
-        cv2.rectangle(frame, (x, y), (x+w, y+h),(0,0,255), 2) 
+        x,y,w,h = cv2.boundingRect(c)
+        cv2.rectangle(frame, (x, y), (x+w, y+h),(0,0,255), 2)
         #cv2.drawContours(frame, contornos, -1, (0,0,255), 3)
         cv2.circle(frame, (int(x+w/2), int(y+h/2)), 2,(0,255,255), 3)
-        cv2.imshow('video', frame)  
+        cv2.imshow('video', frame)
     if cv2.waitKey(1) & 0xFF == ord('s'):
       break
-  else: break 
+  else: break
 captura.release()
 cv2.destroyAllWindows()
 
