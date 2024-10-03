@@ -2,7 +2,7 @@ import cv2
 #C:\Users\Usuario\AppData\Local\Programs\Python\Python38\Lib\site-packages\cv2\data
 #faceClassif = cv2.CascadeClassifier('Data/haarcascade_frontalface_default.xml')
 faceClassif = cv2.CascadeClassifier (cv2.data.haarcascades + 'haarcascade_frontalface_default.xml' )
-image = cv2.imread('Images/hp2.jpg')
+image = cv2.imread('Images/Luna.png')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 faces = faceClassif.detectMultiScale(gray,

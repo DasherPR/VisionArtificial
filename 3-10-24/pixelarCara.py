@@ -45,10 +45,10 @@ faces = faceClassif.detectMultiScale(gray,
   maxSize=(300,300))
 
 for (x,y,w,h) in faces:
-  cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2)
+  #cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2)
   roi = (x,y,w,h);
   copia = np.copy(image)
-  result = pixelate_image_roi(copia, 8,roi)
+  result = pixelate_image_roi(copia, 12,roi)
   image = result;
 
 
