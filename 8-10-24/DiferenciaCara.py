@@ -22,8 +22,8 @@ while True:
   if ret == False: break
   gray = cv2.cvtColor(cap, cv2.COLOR_BGR2GRAY)
   faces = faceClassif.detectMultiScale(gray,
-  scaleFactor=1.12,
-  minNeighbors=5,
+  scaleFactor=1.18,
+  minNeighbors=8,
   minSize=(10,10),
   maxSize=(300,300))
   if i == 25:
